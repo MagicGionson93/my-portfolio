@@ -8,10 +8,7 @@ import { useTranslation } from "react-i18next";
 import useThemeSwitcher from "./hooks/useThemeSwitcher";
 import {
   GithubIcon,
-  TwitterIcon,
   LinkedInIcon,
-  PinterestIcon,
-  DribbbleIcon,
   SunIcon,
   MoonIcon,
   CurriculumIcon,
@@ -159,14 +156,14 @@ export default function NavBar() {
         {/* navbar for lg */}
         <div className="w-full flex justify-between items-center lg:hidden">
           <nav>
-            <CustomLink href="/portfolio/" title="Home" className="mr-4 " />
+            <CustomLink href="/my-portfolio/" title="Home" className="mr-4 " />
             <CustomLink
-              href="/portfolio/about"
+              href="/my-portfolio/about"
               title="About"
               className="mx-4"
             />
             <CustomLink
-              href="/portfolio/projects"
+              href="/my-portfolio/projects"
               title={t("navbarLink")}
               className="mx-4"
             />
@@ -231,19 +228,19 @@ export default function NavBar() {
             >
               <nav className="flex items-center flex-col justify-center">
                 <CustomMobileLink
-                  href="/portfolio/"
+                  href="/my-portfolio/"
                   title="Home"
                   className=""
                   toggle={handleClick}
                 />
                 <CustomMobileLink
-                  href="/portfolio/about"
+                  href="/my-portfolio/about"
                   title="About"
                   className=""
                   toggle={handleClick}
                 />
                 <CustomMobileLink
-                  href="/portfolio/projects"
+                  href="/my-portfolio/projects"
                   title={t("navbarLink")}
                   className="mb-8"
                   toggle={handleClick}

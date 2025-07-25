@@ -1,11 +1,5 @@
 // import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import {
-  createBrowserRouter,
-  BrowserRouter,
-  Routes,
-  Route,
-  Outlet,
-} from "react-router-dom";
+import { Outlet } from "react-router-dom";
 
 import "../styles/globals.css";
 import "../styles/App.css";
@@ -13,15 +7,10 @@ import "../output.css";
 
 import "../components/hooks/i18n";
 
-import Home from "../components/Home";
-import About from "../components/About";
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
-import Projects from "../components/Projects";
 // import Articles from "../components/Articles";
 import TransitionEffect from "../components/TransitionEffect";
-import NotFound from "../components/NotFound";
-import Translation from "../components/Translation";
 
 function App() {
   return (
