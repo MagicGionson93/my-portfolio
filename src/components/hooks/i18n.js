@@ -9,6 +9,7 @@ import ProxiSaldatura from "/images/projects/ProxiSaldatura.webp";
 import YelpCamp from "/images/projects/YelpCamp.webp";
 import Omnifood from "/images/projects/Omnifood.webp";
 import ArtMetal from "/images/projects/ArtMetal.png";
+import MovieApi from "/images/projects/MovieApi.png";
 
 const images = {
   RuotaLibera,
@@ -17,6 +18,7 @@ const images = {
   YelpCamp,
   Omnifood,
   ArtMetal,
+  MovieApi,
 };
 
 i18n
@@ -39,17 +41,26 @@ i18n
           about: {
             aboutTitle: "About Me!",
             bioTitle: "Biography",
-            line1:
-              "Graduated in Computer Science from the Piamarta institute in Brescia in 2013.",
-            line2:
-              " I worked as a technician, warehouse worker and IT manager in the company Proxi Srl for 10 years. Now I understand that I want to do something else in life, I want to learn different jobs and start studying again.",
-            line3:
-              "Over the last year I have carried out online training courses on programming and creating websites. I am a person who is committed to the things he does and who, when he doesn't know them, always tries to find the best solution.",
-            line4:
-              "I completed an internship at the Photonic company located in Taiwan",
-            num1: "Satisfied Clients",
-            num2: "Projects Completed",
-            num3: "Years Of Experience",
+            biographys: [
+              {
+                line: "Graduated in Computer Science from the Piamarta institute in Brescia in 2013.",
+              },
+              {
+                line: "I worked as a technician, warehouse worker and IT manager in the company Proxi Srl for 10 years. Now I understand that I want to do something else in life, I want to learn different jobs and start studying again.",
+              },
+              {
+                line: "Over the last year I have carried out online training courses on programming and creating websites. I am a person who is committed to the things he does and who, when he doesn't know them, always tries to find the best solution.",
+              },
+              {
+                line: "I completed an internship at the Photonic company located in Taiwan",
+              },
+            ],
+            numbers: [
+              { number: 5, title: "Satisfied Clients" },
+              { number: 8, title: "Projects Completed" },
+              { number: 4, title: "Years Of Experience" },
+            ],
+
             experienceTitle: "Experience",
             esp1: "2 months experience thanks to Rotary New Generations Service Exchange. Followed the development of the front end part of the company. Studied various types of languages ​​such as HTML, CSS, Javascript and SQL. Used different components such as Node, Vite and React. Learned about Taiwanese work culture by participating in various team events and bonding with colleagues.",
             esp2: "Created website via the Wordpress platform, using various plugins, searching for the best solution and implementing the use of HTML and CSS. Followed the various directives requested by the client to find the best solution",
@@ -62,8 +73,8 @@ i18n
             ed4: "Studyed programming languages: C++, Java, HTML, CSS, PHP, DOS. Learned electrical engineering and how to diagnose and repair computers.",
           },
           projects: {
-            projectTitle: "Progetti",
-            visit: "Visita",
+            projectTitle: "Projects",
+            visit: "Visit the Webiste!",
             items: [
               {
                 title: "Electric Bike Shop",
@@ -75,10 +86,19 @@ i18n
               },
               {
                 title: "Website created for a metallurgical company",
-                summary: "Created with HTML, CSS, and Javascript, with email sending options and an API for sending emails",
+                summary:
+                  "Created with HTML, CSS, and Javascript, with email sending options and an API for sending emails",
                 link: "https://www.gruppoartmetal.it/index.html",
                 type: "HTML, CSS, Javascipt e API",
                 imageKey: "ArtMetal",
+              },
+              {
+                title: "Site that searches for films via API",
+                summary:
+                  "Website that shows with a list of movies fetching them with a free API",
+                link: "https://magicgionson93.github.io/movieapi/",
+                type: "HTML, CSS, Javascript, API",
+                imageKey: "MovieApi",
               },
               {
                 title: "Company specialized in the sale of welding machines",
@@ -112,7 +132,6 @@ i18n
                 type: "HTML, CSS, Javascript, React, GSAP, Three, Tailwind",
                 imageKey: "Iphone",
               },
-              
             ],
           },
         },
@@ -125,21 +144,29 @@ i18n
             homeTitle: "Il mio viaggio nel Mondo dello Sviluppo Web",
             bio: "Benvenuto nel mio portfolio! Mi chiamo Giovanni Pasini e sono un appassionato junior full-stack developer con una forte dedizione nel trasformare idee in potenti applicazioni web. Vivo in Italia e mi impegno costantemente a rimanere al passo con le più recenti tecnologie e pratiche di sviluppo. Qui potrai esplorare i miei ultimi progetti, che dimostrano la mia competenza specialmente nell'utilizzo di React.js e nello sviluppo web in generale. Sono sempre alla ricerca di nuove sfide e opportunità di crescita, quindi non esitare a contattarmi se desideri collaborare o discutere di idee innovative!",
           },
-
           about: {
             aboutTitle: "Chi sono!",
             bioTitle: "Biografia",
-            line1:
-              "Diplomato in Informatica presso l'istituto Piamarta a Brescia nel 2013.",
-            line2:
-              "Ho lavorato come tecnico, magazziniere e IT manager nell'azienda Proxi Srl per 10 anni. Ora ho capito che voglio fare altro nella vita, voglio imparare diversi lavori e ricominciare a studiare.",
-            line3:
-              "Ho eseguito in questo ultimo anno corsi di formazione online sulla programmazione e la creazione di siti web. Sono una persona che si impegna sulle cose che fa e che quando non le sa cerca sempre di trovare la soluzione migliore.",
-            line4:
-              "Ho completato una internship presso l'azienda Photonic situata in Taiwan",
-            num1: "Clienti Soddisfatti",
-            num2: "Progetti Completati",
-            num3: "Anni di esperienza",
+            biographys: [
+              {
+                line: "Diplomato in Informatica presso l'istituto Piamarta a Brescia nel 2013.",
+              },
+              {
+                line: "Ho lavorato come tecnico, magazziniere e IT manager nell'azienda Proxi Srl per 10 anni. Ora ho capito che voglio fare altro nella vita, voglio imparare diversi lavori e ricominciare a studiare.",
+              },
+              {
+                line: "Ho eseguito in questo ultimo anno corsi di formazione online sulla programmazione e la creazione di siti web. Sono una persona che si impegna sulle cose che fa e che quando non le sa cerca sempre di trovare la soluzione migliore.",
+              },
+              {
+                line: "Ho completato una internship presso l'azienda Photonic situata in Taiwan",
+              },
+            ],
+            numbers: [
+              { number: 5, title: "Clienti Soddisfatti" },
+              { number: 8, title: "Progetti Completati" },
+              { number: 4, title: "Anni di esperienza" },
+            ],
+
             experienceTitle: "Esperienza",
             esp1: "Esperienza di 2 mesi grazie a Rotary New Generations Service Exchange. Seguito lo sviluppo della parte front end dell'azienda. Studiato vari tipi di linguaggi come HTML, CSS, Javascript e SQL. Utilizzato diversi componenti come Node, Vite e React. Appreso la cultura lavorativa Taiwanese partecipando a diversi team events e creando legami con i colleghi.",
             esp2: "Creato sito web tramite la piattaforma di Wordpress, utilizzando diversi plugin, ricercando la migliore soluzione e implementando l'utilizzo HTML e CSS. Seguito le varie direttive richieste dal cliente per trovare la soluzione migliore",
@@ -153,7 +180,7 @@ i18n
           },
           projects: {
             projectTitle: "Progetti!",
-            visit: "Visita",
+            visit: "Visita il Sitoweb!",
             items: [
               {
                 title: "Negozio di Bici Elettriche",
@@ -165,7 +192,8 @@ i18n
               },
               {
                 title: "Sito Web creato per azienda metallurgica",
-                summary: "Creato con HTML, CSS e Javascript con selezione di invio email e aggiunta API per inviare mail",
+                summary:
+                  "Creato con HTML, CSS e Javascript con selezione di invio email e aggiunta API per inviare mail",
                 link: "https://www.gruppoartmetal.it/index.html",
                 type: "HTML, CSS, Javascript e API",
                 imageKey: "ArtMetal",
@@ -177,6 +205,14 @@ i18n
                 link: "https://proxisaldatura.com/",
                 type: "Wix",
                 imageKey: "ProxiSaldatura",
+              },
+              {
+                title: "Ricerca film tramite API",
+                summary:
+                  "Sito che ti permette di effettuare una ricerca di film tramite API",
+                link: "https://magicgionson93.github.io/movieapi/",
+                type: "HTML, CSS, Javascript, API",
+                imageKey: "MovieApi",
               },
               {
                 title: "Creazione e gestione di campeggi",
@@ -200,8 +236,8 @@ i18n
                   "Sito Web che mostra il nuovo iPhone 15 con animazioni e effetti. Ho utilizzato GSAP e Three per le animazioni e l'iPhone in 3D.",
                 link: "https://magicgionson93.github.io/iPhone-website/",
                 type: "HTML, CSS, Javascript, React, GSAP, Three, Tailwind",
-                imageKey: "Iphone",              },
-              
+                imageKey: "Iphone",
+              },
             ],
           },
         },

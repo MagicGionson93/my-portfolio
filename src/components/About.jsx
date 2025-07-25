@@ -19,7 +19,7 @@ import { useTranslation } from "react-i18next";
 
 export default function About() {
   const { t } = useTranslation();
-  const { line1, line2, line3, line4, aboutTitle, bioTitle, num1, num2, num3 } =
+  const { aboutTitle, bioTitle, num1, num2, num3, biographys, numbers } =
     t("about");
   const AnimatedNumbers = ({ value }) => {
     const ref = useRef(null);
@@ -66,10 +66,12 @@ export default function About() {
               <h2 className="mb-4 text-lg font-bold uppercase text-dark/75 dark:text-light/75">
                 {bioTitle}
               </h2>
-              <p className="font-medium">- {line1}</p>
-              <p className="font-medium">- {line2}</p>
-              <p className="font-medium">- {line3}</p>
-              <p className="font-medium">- {line4}</p>
+
+              {biographys.map((lines, index) => (
+                <p className="font-medium" key={index}>
+                  - {lines.line}
+                </p>
+              ))}
             </div>
 
             <div
@@ -88,30 +90,31 @@ export default function About() {
               />
             </div>
             <div className="col-span-2 flex flex-col items-end justify-between lg:flex-row xs:flex-col xl:items-center lg:col-span-8  md:order-3 ">
-              <div className="flex flex-col items-end justify-center xl:items-center">
-                <span className="inline-block text-7xl font-bold md:text-6xl sm:text-5xl xs:text-4xl">
-                  <AnimatedNumbers value={3} />+
-                </span>
-                <h2 className="text-xl font-medium capitalize xl:text-center md:text-lg sm:text-base xs:text-sm">
-                  {num1}
-                </h2>
+              <div className="col-span-2 flex flex-col items-end justify-between lg:flex-row xs:flex-col xl:items-center lg:col-span-8  md:order-3 ">
+                {numbers.map((number, index) => {
+                  return (
+                    <div
+                      key={index}
+                      className="flex flex-col items-end justify-center xl:items-center"
+                    >
+                      <span className="inline-block text-7xl font-bold md:text-6xl sm:text-5xl xs:text-4xl">
+                        <AnimatedNumbers value={number.number} />+
+                      </span>
+                      <h2 className="text-xl font-medium capitalize xl:text-center md:text-lg sm:text-base xs:text-sm">
+                        {number.title}
+                      </h2>
+                    </div>
+                  );
+                })}
               </div>
-              <div className="flex flex-col items-end justify-center xl:items-center">
+              {/* <div className="flex flex-col items-end justify-center xl:items-center">
                 <span className="inline-block text-7xl font-bold  md:text-6xl sm:text-5xl xs:text-4xl">
                   <AnimatedNumbers value={4} />+
                 </span>
                 <h2 className="text-xl font-medium capitalize xl:text-center md:text-lg sm:text-base xs:text-sm">
-                  {num2}
-                </h2>
-              </div>
-              <div className="flex flex-col items-end justify-center xl:items-center">
-                <span className="inline-block text-7xl font-bold  md:text-6xl sm:text-5xl xs:text-4xl">
-                  <AnimatedNumbers value={1} />+
-                </span>
-                <h2 className="text-xl font-medium capitalize xl:text-center md:text-lg sm:text-base xs:text-sm">
                   {num3}
                 </h2>
-              </div>
+              </div> */}
             </div>
           </div>
 
