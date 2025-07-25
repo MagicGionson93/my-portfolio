@@ -1,13 +1,29 @@
 import i18n from "i18next";
 import LanguageDetector from "i18next-browser-languagedetector";
-import { Translation, initReactI18next } from "react-i18next";
-import useThemeSwitcher from "./useThemeSwitcher";
+import { initReactI18next } from "react-i18next";
+// import useThemeSwitcher from "./useThemeSwitcher";
+
+import Iphone from "/images/projects/iPhone-webiste.webp";
+import RuotaLibera from "/images/projects/RuotaLibera.webp";
+import ProxiSaldatura from "/images/projects/ProxiSaldatura.webp";
+import YelpCamp from "/images/projects/YelpCamp.webp";
+import Omnifood from "/images/projects/Omnifood.webp";
+import ArtMetal from "/images/projects/ArtMetal.png";
+
+const images = {
+  RuotaLibera,
+  Iphone,
+  ProxiSaldatura,
+  YelpCamp,
+  Omnifood,
+  ArtMetal,
+};
 
 i18n
   .use(LanguageDetector)
   .use(initReactI18next)
   .init({
-    debug: true,
+    debug: false,
     fallbackLng: "en",
     returnObjects: true,
     resources: {
@@ -46,18 +62,58 @@ i18n
             ed4: "Studyed programming languages: C++, Java, HTML, CSS, PHP, DOS. Learned electrical engineering and how to diagnose and repair computers.",
           },
           projects: {
-            projectTitle: "Projects!",
-            pro1Title: "Electric Bike Shop",
-            pro1: "Website created with Wordpress showing the electric bicycles the shop sells.",
-            pro2Title: "Company specialized in the sale of welding machines",
-            pro2: "Website created with Wix showing the various products the company sells.",
-            pro3Title: "Creation and management of campsites",
-            pro3: "Website created with HTML, CSS, Javascript, Node and MongoDB. Ability to register, create and manage campsites.",
-            pro4Title: "Showcase website",
-            pro4: "Website created with HTML, CSS and Javascript. Created as a showcase site and used different types of animations.",
-            pro5Title: "Iphone webiste with 3D render",
-            pro5: "Website that shows with visual effects the new Iphone 15. I used GSAP and Three for the animations with a 3D render of the iPhone.",
-            visit: "Visit",
+            projectTitle: "Progetti",
+            visit: "Visita",
+            items: [
+              {
+                title: "Electric Bike Shop",
+                summary:
+                  "Website created with Wordpress showing the electric bicycles the shop sells.",
+                link: "https://ruotaliberabrescia.com/",
+                type: "Wordpress, HTML, CSS",
+                imageKey: "RuotaLibera",
+              },
+              {
+                title: "Website created for a metallurgical company",
+                summary: "Created with HTML, CSS, and Javascript, with email sending options and an API for sending emails",
+                link: "https://www.gruppoartmetal.it/index.html",
+                type: "HTML, CSS, Javascipt e API",
+                imageKey: "ArtMetal",
+              },
+              {
+                title: "Company specialized in the sale of welding machines",
+                summary:
+                  "Website created with Wix showing the various products the company sells.",
+                link: "https://proxisaldatura.com/",
+                type: "Wix",
+                imageKey: "ProxiSaldatura",
+              },
+              {
+                title: "Creation and management of campsites",
+                summary:
+                  "Website created with HTML, CSS, Javascript, Node and MongoDB. Ability to register, create and manage campsites.",
+                link: "#",
+                type: "HTML, CSS, Javascript, Node e MongoDB",
+                imageKey: "YelpCamp",
+              },
+              {
+                title: "Showcase website",
+                summary:
+                  "Website created with HTML, CSS and Javascript. Created as a showcase site and used different types of animations.",
+                link: "https://magicgionson93.github.io/omnifood/",
+                type: "HTML, CSS e Javascript",
+                imageKey: "Omnifood",
+              },
+              {
+                title: "Iphone webiste with 3D render",
+                summary:
+                  "Website that shows with visual effects the new Iphone 15. I used GSAP and Three for the animations with a 3D render of the iPhone.",
+                link: "https://magicgionson93.github.io/iPhone-website/",
+                type: "HTML, CSS, Javascript, React, GSAP, Three, Tailwind",
+                imageKey: "Iphone",
+              },
+              
+            ],
           },
         },
       },
@@ -97,19 +153,60 @@ i18n
           },
           projects: {
             projectTitle: "Progetti!",
-            pro1Title: "Negozio di Bici Elettriche",
-            pro1: "Sito Web creato con Wordpress che mostra le biciclette elettriche che il negozio vende.",
-            pro2Title: "Azienda specializzata nella vendita delle Saldatrici",
-            pro2: "Sito Web creato con Wix che mostra i vari prodotti che l'azienda vende.",
-            pro3Title: "Creazione e gestione di campeggi",
-            pro3: "Sito Web creato con HTML, CSS, Javascript, Node e MongoDB. Possibilità di registrazione, creazione e gestione di campeggi.",
-            pro4Title: "Sito Web vetrina",
-            pro4: "Sito Web creato con HTML, CSS e Javascript. Creato come sito vetrina e utilizzato diversi tipi di animazioni.",
-            pro5Title: "Sito Web iPhone con 3D iPhone",
-            pro5: "Sito Web che mostra il nuovo iPhone 15 con animazioni e effetti. Ho utilizzato GSAP e Three per le animazioni e l'iPhone in 3D.",
             visit: "Visita",
+            items: [
+              {
+                title: "Negozio di Bici Elettriche",
+                summary:
+                  "Sito Web creato con Wordpress che mostra le biciclette elettriche che il negozio vende.",
+                link: "https://ruotaliberabrescia.com/",
+                type: "Wordpress, HTML, CSS",
+                imageKey: "RuotaLibera",
+              },
+              {
+                title: "Sito Web creato per azienda metallurgica",
+                summary: "Creato con HTML, CSS e Javascript con selezione di invio email e aggiunta API per inviare mail",
+                link: "https://www.gruppoartmetal.it/index.html",
+                type: "HTML, CSS, Javascript e API",
+                imageKey: "ArtMetal",
+              },
+              {
+                title: "Azienda specializzata nella vendita delle Saldatrici",
+                summary:
+                  "Sito Web creato con Wix che mostra i vari prodotti che l'azienda vende.",
+                link: "https://proxisaldatura.com/",
+                type: "Wix",
+                imageKey: "ProxiSaldatura",
+              },
+              {
+                title: "Creazione e gestione di campeggi",
+                summary:
+                  "Sito Web creato con HTML, CSS, Javascript, Node e MongoDB. Possibilità di registrazione, creazione e gestione di campeggi.",
+                link: "#",
+                type: "HTML, CSS, Javascript, Node e MongoDB",
+                imageKey: "YelpCamp",
+              },
+              {
+                title: "Sito Web vetrina",
+                summary:
+                  "Sito Web creato con HTML, CSS e Javascript. Creato come sito vetrina e utilizzato diversi tipi di animazioni.",
+                link: "https://magicgionson93.github.io/omnifood/",
+                type: "HTML, CSS e Javascript",
+                imageKey: "Omnifood",
+              },
+              {
+                title: "Sito Web iPhone con 3D iPhone",
+                summary:
+                  "Sito Web che mostra il nuovo iPhone 15 con animazioni e effetti. Ho utilizzato GSAP e Three per le animazioni e l'iPhone in 3D.",
+                link: "https://magicgionson93.github.io/iPhone-website/",
+                type: "HTML, CSS, Javascript, React, GSAP, Three, Tailwind",
+                imageKey: "Iphone",              },
+              
+            ],
           },
         },
       },
     },
   });
+
+export default images;

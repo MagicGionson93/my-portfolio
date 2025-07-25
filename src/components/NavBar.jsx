@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import Logo from "./Logo";
 import CV from "/CV/CV-Giovanni-Pasini.pdf";
@@ -115,16 +115,6 @@ export default function NavBar() {
     };
   }, [isOpen]);
 
-  // const changeLanguage = (lang) => {
-  //   if (lang === "en") {
-  //     i18n.changeLanguage("it");
-  //     setLang("it");
-  //   } else {
-  //     i18n.changeLanguage("en");
-  //     setLang("en");
-  //   }
-  // };
-
   return (
     <>
       <header
@@ -134,7 +124,7 @@ export default function NavBar() {
         ref={navbarRef}
       >
         <button
-          className="hidden flex flex-col justify-center items-center  lg:flex"
+          className="hidden flex-col justify-center items-center  lg:flex"
           onClick={handleClick}
         >
           <span

@@ -6,13 +6,9 @@ import AnimatedText from "./AnimatedText";
 import Image from "./Image";
 import { GithubIcon } from "./icons";
 import TransitionEffect from "./TransitionEffect";
-import Iphone from "/images/projects/iPhone-webiste.webp";
-import RuotaLibera from "/images/projects/RuotaLibera.webp";
-import ProxiSaldatura from "/images/projects/ProxiSaldatura.webp";
-import YelpCamp from "/images/projects/YelpCamp.webp";
-import Omnifood from "/images/projects/Omnifood.webp";
-import ArtMetal from "/images/projects/ArtMetal.png"
+import images from "../components/hooks/i18n.js";
 import { useTranslation } from "react-i18next";
+import PropTypes from "prop-types";
 
 const FeaturedProject = ({ type, title, summary, img, link, github }) => {
   return (
@@ -71,7 +67,7 @@ const FeaturedProject = ({ type, title, summary, img, link, github }) => {
   );
 };
 
-const Project = ({ title, type, img, link, github, summary, visit }) => {
+const Project = ({ title, type, img, link, summary, visit }) => {
   return (
     <article
       className="group w-full flex flex-col items-center justify-center rounded-2xl
@@ -100,6 +96,7 @@ const Project = ({ title, type, img, link, github, summary, visit }) => {
           href={link}
           target="_blank"
           className="hover:underline underline-offset-4"
+          rel="noopener noreferrer"
         >
           <h2 className="my-2 w-full text-left text-3xl font-bold lg:text-2xl h-16 xl:h-24 sm:h-auto md:h-auto xs:h-auto">
             {title}
@@ -114,6 +111,7 @@ const Project = ({ title, type, img, link, github, summary, visit }) => {
             href={link}
             target="_blank"
             className=" text-lg font-semibold underline md:text-base"
+            rel="noopener noreferrer"
           >
             {visit}
           </a>
@@ -128,20 +126,7 @@ const Project = ({ title, type, img, link, github, summary, visit }) => {
 
 export default function Projects() {
   const { t } = useTranslation();
-  const {
-    projectTitle,
-    pro1,
-    pro2,
-    pro3,
-    pro4,
-    pro5,
-    pro1Title,
-    pro2Title,
-    pro3Title,
-    pro4Title,
-    pro5Title,
-    visit,
-  } = t("projects");
+  const { items, projectTitle, visit } = t("projects");
 
   return (
     <>
@@ -154,17 +139,23 @@ export default function Projects() {
             className="mb-16 lg:!text-[3.9rem] sm:!text-6xl xs:!text-4xl sm:mb-8"
           />
           <div className="grid grid-cols-12 gap-24 gap-y-32 xl:gap-x-8 xl:gap-y-24  lg:gap-x-8 lg:gap-y-16 md:gap-x-6 md:gap-y-24 sm:gap-x-4 xs:gap-x-0">
-            <div className="col-span-6 md:col-span-12 lg:col-span-12 sm:col-span-12">
-              <Project
-                title={pro5Title}
-                summary={pro5}
-                link="https://magicgionson93.github.io/iPhone-website/"
-                type="HTML, CSS, Javascript, React, GSAP, Three, Tailwind"
-                img={Iphone}
-                visit={visit}
-              />
-            </div>
-            <div className="col-span-6 md:col-span-12 lg:col-span-12 sm:col-span-12">
+            {items.map((project) => (
+              <div
+                key={project.title}
+                className="col-span-6 md:col-span-12 lg:col-span-12 sm:col-span-12"
+              >
+                <Project
+                  title={project.title}
+                  summary={project.summary}
+                  link={project.link}
+                  type={project.type}
+                  img={images[project.imageKey]}
+                  visit={visit}
+                />
+              </div>
+            ))}
+
+            {/* <div className="col-span-6 md:col-span-12 lg:col-span-12 sm:col-span-12">
               <Project
                 title={pro1Title}
                 summary={pro1}
@@ -213,10 +204,29 @@ export default function Projects() {
                 img={ArtMetal}
                 visit={visit}
               />
-            </div>
+            </div> */}
           </div>
         </Layout>
       </main>
     </>
   );
 }
+
+FeaturedProject.propTypes = {
+  type: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  summary: PropTypes.string.isRequired,
+  img: PropTypes.string.isRequired,
+  link: PropTypes.string.isRequired,
+  github: PropTypes.string.isRequired,
+};
+
+Project.propTypes = {
+  type: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  summary: PropTypes.string.isRequired,
+  img: PropTypes.string.isRequired,
+  link: PropTypes.string.isRequired,
+  github: PropTypes.string,
+  visit: PropTypes.string.isRequired,
+};
