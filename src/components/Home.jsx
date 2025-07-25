@@ -41,40 +41,11 @@ export default function Home() {
               <p className="mt-8 text-base font-medium dark:text-light ">
                 {bio}
               </p>
-              {/* <div className="flex items-center self-start mt-20 lg:mt-8 lg:self-center">
-                <a
-                  href={CV}
-                  target={"_blank"}
-                  className="flex items-center bg-dark text-light p-2.5 px-6 
-                   rounded-lg text-lg font-semibold  hover:bg-light hover:text-dark
-                   border-2 border-solid border-transparent hover:border-dark
-
-                   dark:bg-light dark:text-dark hover:dark:bg-dark hover:dark:text-light
-                   hover:dark:border-light md:pd-2 md:px-4 md:text-base"
-                  download={true}
-                >
-                  CV <LinkArrow className={"w-6 ml-1"} />
-                </a>
-                <a
-                  href="mailto: gpasini93@gmail.com"
-                  className="ml-4 text-lg font-medium capitalize text-dark underline
-                  dark:text-light md:text-base
-                            "
-                >
-                  Contatto
-                </a>
-              </div> */}
+              
             </div>
           </div>
         </Layout>
         <HireMe />
-        {/* <div className="absolute right-8 bottom-8 inline-block w-4 h-4">
-          <Image
-            urlImage={lightBulb}
-            alt="Giovanni Pasini"
-            className="w-full h-auto"
-          />
-        </div> */}
       </main>
     </>
   );

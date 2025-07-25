@@ -33,7 +33,7 @@ const Details = ({ type, time, place, info }) => {
 export default function Education() {
   const ref = useRef(null);
   const { t } = useTranslation();
-  const { educationTitle, ed1, ed2, ed3, ed4 } = t("about");
+  const { educationTitle, educations } = t("about");
   const { scrollYProgress } = useScroll({
     target: ref,
     offset: ["start end ", "center start"],
@@ -55,47 +55,13 @@ export default function Education() {
             viewport={{ once: true }}
           />
           <ul className="w-full flex flex-col items-start justify-between ml-4 xs:ml-2">
-            <Details
-              type="Udemy / The Web Developer Bootcamp 2024"
-              company="Udemy"
-              time="2024"
-              place="Online"
-              info={ed1}
-            />
-            <Details
-              type="Udemy / The Complete Web Developer in 2023: Zero To Mastery"
-              company="Udemy"
-              time="2023"
-              place="Online"
-              info={ed2}
-            />
-            <Details
-              type="Udemy / The Complete Python Bootcamp"
-              company="Udemy"
-              time="2022 - 2023"
-              place="Online"
-              info={ed3}
-            />
-            <Details
-              type="Istituto tecnico superiore Piamarta / Perito Informatico"
-              company="Istituto Piamarta"
-              time="2007 - 2013"
-              place="Brescia"
-              info={ed4}
-            />
+            { educations.map((ed, index) => {
+              <Details key={index } type={ed.type} company={ed.company} time={ed.time} place={ed.place} info={ed.info} />
+            })}
+            {/*  */}
           </ul>
         </div>
       </div>
     </>
   );
 }
-
-// Master Of Computer Science
-// 2020-2022 | Stanford University
-// Completed a master's project on deep learning, developing a new neural network architecture for natural
-// language understanding.
-
-// Online Coursework
-// 2016-2020 | Coursera And EdX
-// Completed coursework in advanced topics such as Reinforcement Learning, Computer Vision, and Machine
-// Learning Engineering.
