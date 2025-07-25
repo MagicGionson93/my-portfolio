@@ -10,19 +10,19 @@ import NotFound from "../components/NotFound.jsx";
 
 const router = createBrowserRouter([
   {
-    path: "/portfolio/",
+    path: "/my-portfolio/",
     element: <App />,
     children: [
       {
-        path: "/portfolio/",
+        path: "/my-portfolio/",
         element: <Home />,
       },
       {
-        path: "/portfolio/about",
+        path: "/my-portfolio/about",
         element: <About />,
       },
       {
-        path: "/portfolio/projects",
+        path: "/my-portfolio/projects",
         element: <Projects />,
       },
       {
