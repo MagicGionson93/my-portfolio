@@ -56,7 +56,7 @@ i18n
               },
             ],
             numbers: [
-              { number: 5, title: "Satisfied Clients" },
+              { number: 5, title: "Satisfied" },
               { number: 8, title: "Projects Completed" },
               { number: 4, title: "Years Of Experience" },
             ],
