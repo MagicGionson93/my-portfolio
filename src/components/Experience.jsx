@@ -63,7 +63,7 @@ export default function Experince() {
           />
           <ul className="w-full flex flex-col items-start justify-between ml-4 xs:ml-2">
             { experiences.map((exp, index) => (
-              <Details position={exp.position} company={exp.company} time={exp.time} address={exp.address} work={exp.work} companyLink={exp.companyLink} />
+              <Details key={ index } position={exp.position} company={exp.company} time={exp.time} address={exp.address} work={exp.work} companyLink={exp.companyLink} />
             ))}
           </ul>
         </div>

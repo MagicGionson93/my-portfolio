@@ -3,7 +3,7 @@ import { useRef } from "react";
 import LiIcon from "./LiIcon";
 import { useTranslation } from "react-i18next";
 
-const Details = ({ type, time, place, info }) => {
+const Details = ({ type, time, place, info, company }) => {
   const ref = useRef(null);
   return (
     <li
@@ -22,7 +22,7 @@ const Details = ({ type, time, place, info }) => {
           {type}{" "}
         </h3>
         <span className="capitalize font-medium text-dark/75 dark:text-light/75 xs:text-sm">
-          {time} | {place}
+          {time} | {place} {company}
         </span>
         <p className="font-medium w-full sm:text-xl md:text-lg">{info}</p>
       </motion.div>
@@ -55,10 +55,10 @@ export default function Education() {
             viewport={{ once: true }}
           />
           <ul className="w-full flex flex-col items-start justify-between ml-4 xs:ml-2">
-            { educations.map((ed, index) => {
-              <Details key={index } type={ed.type} company={ed.company} time={ed.time} place={ed.place} info={ed.info} />
-            })}
-            {/*  */}
+            { educations.map((ed, index) => (
+              <Details key={index} type={ed.type} company={ed.company} time={ed.time} place={ed.place} info={ed.info} />
+            )) }
+            
           </ul>
         </div>
       </div>

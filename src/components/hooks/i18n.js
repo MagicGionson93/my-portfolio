@@ -60,6 +60,7 @@ i18n
               { number: 8, title: "Projects Completed" },
               { number: 4, title: "Years Of Experience" },
             ],
+            experienceTitle: "Work Experience",
             experiences: [
               {
                 position: "Web Development Intern",
@@ -116,11 +117,12 @@ i18n
                 place: "Brescia",
               },
             ],
-            educationTitle: "Education",
+            educationTitle: "Studies",
           },
           projects: {
             projectTitle: "Projects",
             visit: "Visit the Webiste!",
+            notAvaible: "Not Avaible :(",
             items: [
               {
                 title: "Electric Bike Shop",
@@ -212,6 +214,7 @@ i18n
               { number: 8, title: "Progetti Completati" },
               { number: 4, title: "Anni di esperienza" },
             ],
+            experienceTitle: "Esperienze Lavorative",
             experiences: [
               {
                 position: "Web Development Intern",
@@ -269,10 +272,11 @@ i18n
               },
             ],
 
-            educationTitle: "Educazione",           
+            educationTitle: "Studi",           
           },
           projects: {
             projectTitle: "Progetti!",
+            notAvaible: "Non Disponibile :(",
             visit: "Visita il Sitoweb!",
             items: [
               {
