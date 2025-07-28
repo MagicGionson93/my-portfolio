@@ -10,6 +10,8 @@ import YelpCamp from "/images/projects/YelpCamp.webp";
 import Omnifood from "/images/projects/Omnifood.webp";
 import ArtMetal from "/images/projects/ArtMetal.png";
 import MovieApi from "/images/projects/MovieApi.png";
+import Skin from "/images/projects/Skin.png";
+import { summary } from "framer-motion/client";
 
 const images = {
   RuotaLibera,
@@ -19,6 +21,7 @@ const images = {
   Omnifood,
   ArtMetal,
   MovieApi,
+  Skin
 };
 
 i18n
@@ -180,6 +183,20 @@ i18n
                 type: "HTML, CSS, Javascript, React, GSAP, Three, Tailwind",
                 imageKey: "Iphone",
               },
+              {
+                title: "Website for a skincare company",
+                summary: "This website is about a skincare company, with some videos, features and price plan.",
+                link: "https://magicgionson93.github.io/skin/",
+                type: "HTML, CSS, Javascript, React",
+                imageKey: "Skin",
+              }
+              // {
+              //   title: "",
+              //   summary: "",
+              //   link: "",
+              //   type: "",
+              //   imageKey: "",
+              // }
             ],
           },
         },
@@ -272,7 +289,7 @@ i18n
               },
             ],
 
-            educationTitle: "Studi",           
+            educationTitle: "Studi",
           },
           projects: {
             projectTitle: "Progetti!",
@@ -335,6 +352,13 @@ i18n
                 type: "HTML, CSS, Javascript, React, GSAP, Three, Tailwind",
                 imageKey: "Iphone",
               },
+              {
+                title: "Sito Web per estetiste",
+                summary: "Questo sito web riguarda un'azienda di prodotti per la cura della pelle, con alcuni video, caratteristiche e piani tariffari.",
+                link: "https://magicgionson93.github.io/skin/",
+                type: "HTML, CSS, Javascript, React",
+                imageKey: "Skin",
+              }
             ],
           },
         },
