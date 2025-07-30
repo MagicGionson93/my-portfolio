@@ -8,7 +8,7 @@ const Details = ({ type, time, place, info, company }) => {
   return (
     <li
       ref={ref}
-      className="my-8 first:mt-0 last:mb-0 w-[60%] mx-auto flex flex-col items-center justify-between md:w-[80%] sm:mr-2"
+      className="my-8 first:mt-0 last:mb-0 w-[60%] mx-auto flex flex-col justify-between md:w-[80%] sm:mr-2"
     >
       <LiIcon reference={ref} />
 
@@ -55,10 +55,16 @@ export default function Education() {
             viewport={{ once: true }}
           />
           <ul className="w-full flex flex-col items-start justify-between ml-4 xs:ml-2">
-            { educations.map((ed, index) => (
-              <Details key={index} type={ed.type} company={ed.company} time={ed.time} place={ed.place} info={ed.info} />
-            )) }
-            
+            {educations.map((ed, index) => (
+              <Details
+                key={index}
+                type={ed.type}
+                company={ed.company}
+                time={ed.time}
+                place={ed.place}
+                info={ed.info}
+              />
+            ))}
           </ul>
         </div>
       </div>
