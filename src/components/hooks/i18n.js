@@ -11,7 +11,7 @@ import Omnifood from "/images/projects/Omnifood.webp";
 import ArtMetal from "/images/projects/ArtMetal.png";
 import MovieApi from "/images/projects/MovieApi.png";
 import Skin from "/images/projects/Skin.png";
-import { summary } from "framer-motion/client";
+// import { summary } from "framer-motion/client";
 
 const images = {
   RuotaLibera,
@@ -21,7 +21,7 @@ const images = {
   Omnifood,
   ArtMetal,
   MovieApi,
-  Skin
+  Skin,
 };
 
 i18n
@@ -113,6 +113,13 @@ i18n
                 place: "Online",
               },
               {
+                info: "Degree in computer science from the University of Verona",
+                type: "Degree in computer science",
+                company: "University of Verona",
+                time: "2013",
+                place: "Verona",
+              },
+              {
                 info: "Studyed programming languages: C++, Java, HTML, CSS, PHP, DOS. Learned electrical engineering and how to diagnose and repair computers.",
                 type: "Istituto tecnico superiore Piamarta / Perito Informatico",
                 company: "Istituto Piamarta",
@@ -185,11 +192,12 @@ i18n
               },
               {
                 title: "Website for a skincare company",
-                summary: "This website is about a skincare company, with some videos, features and price plan.",
+                summary:
+                  "This website is about a skincare company, with some videos, features and price plan.",
                 link: "https://magicgionson93.github.io/skin/",
                 type: "HTML, CSS, Javascript, React",
                 imageKey: "Skin",
-              }
+              },
               // {
               //   title: "",
               //   summary: "",
@@ -281,6 +289,13 @@ i18n
                 place: "Online",
               },
               {
+                info: "Laurea in Informatica presso l'università di Verona",
+                type: "Laurea in Informatica",
+                company: "Università di Verona",
+                time: "2013",
+                place: "Verona",
+              },
+              {
                 info: "Studiato linguaggi di programmazione: C++, Java, HTML, CSS, PHP, DOS. Imparato elettrotecnica e come diagnosticare e riparare computer.",
                 type: "Istituto tecnico superiore Piamarta / Perito Informatico",
                 company: "Istituto Piamarta",
@@ -354,11 +369,12 @@ i18n
               },
               {
                 title: "Sito Web per estetiste",
-                summary: "Questo sito web riguarda un'azienda di prodotti per la cura della pelle, con alcuni video, caratteristiche e piani tariffari.",
+                summary:
+                  "Questo sito web riguarda un'azienda di prodotti per la cura della pelle, con alcuni video, caratteristiche e piani tariffari.",
                 link: "https://magicgionson93.github.io/skin/",
                 type: "HTML, CSS, Javascript, React",
                 imageKey: "Skin",
-              }
+              },
             ],
           },
         },
